@@ -1,0 +1,22 @@
+
+Changelog Noctifer Directory Gallery Script
+
+1.06 2015-08-01
+- Added Open Graph tags: type, title, description, and image (where images are available)
+
+1.05 2015-06-04
+- Removed the <a> outline
+
+1.04 2015-04-07
+- Photo browser: Fixed a bug where the CSS layout did not automatically take the thumbnailSize into account
+- Photo browser: Added a variable to set the maximum number of thumbnail columns
+- Minor change to black-grey colour scheme
+
+1.03 2015-04-02
+- Photo viewer: Can now be controlled by keyboard (home/left/right/end to navigate photos, up to go back to photo browser, enter to toggle zoom)
+- Photo viewer: Image number and count (x/y) now displayed in title
+- Photo viewer: Zoom mode now stored in cookie
+- Photo viewer: Title is no longer one big link; only the filename is now clickable
+- Photo browser: Image count now displayed in title
+- Photo browser: Moved thumbnailTitle one px up to keep the border from showing in some browsers
+- Minor changes/improvements
