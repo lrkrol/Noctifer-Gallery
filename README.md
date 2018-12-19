@@ -1,5 +1,5 @@
 # Noctifer Directory Gallery Script
-This is a single-file PHP script that handles everything you need in order to turn a directory into an online image gallery. Simply drop `index.php` into the directory (with appropriate permissions), and you'll get both an image browser and a full-screen viewer. 
+This is a single-file PHP script that handles everything you need in order to turn a directory into an online image gallery. Simply drop `index.php` into the directory (with appropriate permissions), and you'll get both an image browser and a full-screen viewer. [Try this online example for an impression.](https://files.noctifer.net/2014_california/joshua%20tree)
 
 
 ## Folder & Image Thumbnail Browser
@@ -28,7 +28,7 @@ Mobile swipe shortcuts:
 
 
 ## Colour Scheme
-The style sheet uses only four colours: background, foreground (text, lines), and highlights for these two (for focus/hover). These can be set using `$bgColour`, `$fgColour`, `$bgColourHighlight`, and `$fgColourHighlight` using CSS colour codes. A light and a dark colour scheme are included. [This online example](http://files.noctifer.net/2014_california/) uses the dark colour scheme.
+The style sheet uses only four colours: background, foreground (text, lines), and highlights for these two (for focus/hover). These can be set using `$bgColour`, `$fgColour`, `$bgColourHighlight`, and `$fgColourHighlight` using CSS colour codes. A light and a dark colour scheme are included. [This online example](https://files.noctifer.net/2014_california) uses the dark colour scheme.
 
 
 ## Notes on usage
