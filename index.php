@@ -42,8 +42,10 @@ $thumbnailColumnsMobile = 2;
 # thumbnail jpeg quality, 0 = worst (smaller file), 100 = best (larger file)
 $thumbnailQuality = 100;
 
-# whether or not to insert this script into subdirectories when no other index file is present
+# whether or not to insert this script into subdirectories when no other index file is present,
+# and array of directories to not copy to
 $copyToSubs = true;
+$copyToSubsExcluded = array("excltest", "old");
 
 # black colour scheme
 $bgColour = 'black';                # page background
@@ -90,7 +92,8 @@ if ( $dh = opendir( '.' ) ) {
             # copying script to subdirectory if no index file is present
             if ( $copyToSubs && !is_file( $itemName . DIRECTORY_SEPARATOR . "index.php" )
                              && !is_file( $itemName . DIRECTORY_SEPARATOR . "index.html" )
-                             && !is_file( $itemName . DIRECTORY_SEPARATOR . "index.htm" ) ) {
+                             && !is_file( $itemName . DIRECTORY_SEPARATOR . "index.htm" )
+                             && !in_array( $itemName, $copyToSubsExcluded ) ) {
                 copy("index.php", $itemName . DIRECTORY_SEPARATOR . "index.php");
             }
         }

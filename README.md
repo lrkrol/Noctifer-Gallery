@@ -34,7 +34,7 @@ The style sheet uses only four colours: background, foreground (text, lines), an
 ## Notes on usage
 Generally, simply drop the script into a directory and it will do the rest. Some things to keep in mind, though:
 
-By default, **this script copies itself to all subdirectories it finds** that do not yet have an index file. This allows you to drop it once into the root of a larger gallery structure without putting it into every directory manually. This behaviour can bedisabled by setting `$copyToSubs` to false. 
+By default, **this script copies itself to all subdirectories it finds** that do not yet have an index file. This allows you to drop it once into the root of a larger gallery structure without putting it into every directory manually. This behaviour can be disabled by setting `$copyToSubs` to false. Individual directory names can also be excluded from this behaviour through `$copyToSubsExcluded`.
 
 Since this script needs write access (to create thumbnail directories, thumbnail images, and potentially new copies of the script itself), it requires appropriate permissions. These may need to be set manually for the directory containing the script. Furthermore, the script will be the owner of the files it writes. Depending on your server configuration, you may not be able to simply delete these files. Should this happen, ask your host how to regain ownership of the files. Another option is to run the script on a local server first before copying all subsequently generated files, including thumbnails, onto your online host.
 
