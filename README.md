@@ -3,7 +3,7 @@ This is a single-file PHP script that handles everything you need in order to tu
 
 
 ## Folder & Image Thumbnail Browser
-By default, when calling this script, it shows a browser. The browser shows thumbnails for supported image files (currently bmp, jpg, png, gif), and lists subdirectories for navigation. When new files are encountered, it automatically creates thumbnails and stores them in a special-purpose subdirectory. (Because of this, the script may take a while to load when accessing it for the first time. It may even time out. Simply refresh until all thumbnails are created.)
+By default, when calling this script, it shows a browser. The browser shows thumbnails for supported image files (currently BMP, PNG, JPG, and GIF), and lists subdirectories for navigation. When new files are encountered, it automatically creates thumbnails and stores them in a special-purpose subdirectory. (Because of this, the script may take a while to load when accessing it for the first time. It may even time out. Simply refresh until all thumbnails are created.)
 
 Use `$thumbnailSize` to set the size of the thumbnails' longest edge in pixels. `$thumbnailSquare` enforces square thumbnails, cropping the middle of the images. Thumbnails will be JPEGs, with `$thumbnailQuality` determining their image quality.
 
@@ -37,5 +37,7 @@ Generally, simply drop the script into a directory and it will do the rest. Some
 By default, **this script copies itself to all subdirectories it finds** that do not yet have an index file. This allows you to drop it once into the root of a larger gallery structure without putting it into every directory manually. This behaviour can bedisabled by setting `$copyToSubs` to false. 
 
 Since this script needs write access (to create thumbnail directories, thumbnail images, and potentially new copies of the script itself), it requires appropriate permissions. These may need to be set manually for the directory containing the script. Furthermore, the script will be the owner of the files it writes. Depending on your server configuration, you may not be able to simply delete these files. Should this happen, ask your host how to regain ownership of the files. Another option is to run the script on a local server first before copying all subsequently generated files, including thumbnails, onto your online host.
+
+Currently, BMP, PNG, JPG, and GIF are supported, although BMP support is only available starting from PHP 7.2. If you want to add support for additional formats, edit both the `$allowedExtensions` array and the `switch ($type)` statement to make sure the files are recognised and the thumbnails can be generated.
 
 The script is about 30 kB. This is well below recommended sizes for fast page loads. If you want to reduce it, however, a decent chunk of the size is due to the favicon, stored inline in base64 format to remain the single-file utility. Removing this line will save you about 10 kB.
