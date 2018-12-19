@@ -45,7 +45,7 @@ $thumbnailQuality = 100;
 # whether or not to insert this script into subdirectories when no other index file is present,
 # and array of directories to not copy to
 $copyToSubs = true;
-$copyToSubsExcluded = array(".git");
+$copyToSubsExcluded = array("..", ".git");
 
 # black colour scheme
 $bgColour = 'black';                # page background
