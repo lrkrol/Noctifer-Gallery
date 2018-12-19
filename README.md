@@ -1,4 +1,4 @@
-# Noctifer-Gallery
+# Noctifer Directory Gallery Script
 This is a single-file PHP script that handles everything you need in order to turn a directory into an online image gallery. Simply drop `index.php` into the directory (with appropriate permissions), and you'll get both an image browser and a full-screen viewer. 
 
 
