@@ -166,16 +166,16 @@ if ( isset( $_GET['view'] ) && in_array( $_GET['view'], $imageList ) ) {
             $type = $imageinfo[2];
 
             switch ($type) {
-                case 1 :
+                case IMAGETYPE_GIF :
                     $img = imageCreateFromGif( $image );
                 break;
-                case 2 :
+                case IMAGETYPE_JPEG :
                     $img = imageCreateFromJpeg( $image );
                 break;
-                case 3 :
+                case IMAGETYPE_PNG :
                     $img = imageCreateFromPng( $image );
                 break;
-                case 6 :
+                case IMAGETYPE_BMP :
                     $img = imageCreateFromBmp( $image );
                 break;
             }
