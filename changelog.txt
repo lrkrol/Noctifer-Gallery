@@ -1,7 +1,7 @@
 
 Changelog Noctifer Directory Gallery Script
 
-1.18 2018-12-19
+1.20 2018-12-19
 - Made design responsive, added thumbnailColumnsMobile variable
 - Added swipe events on mobile for previous/next/back
 - Added command highlights to keyboard shortcuts and swipe events
@@ -14,6 +14,8 @@ Changelog Noctifer Directory Gallery Script
 - Added BMP support (PHP >= 7.2)
 - Added favicon
 - Added option to automatically copy script to subdirectories
+- Added option to configure thumbnail transparency colour
+- Adjusted colour schemes to be slightly off-white/off-black for black/white transparent images
 
 1.06 2015-08-01
 - Added Open Graph tags: type, title, description, and image (where images are available)

@@ -5,7 +5,7 @@ This is a single-file PHP script that handles everything you need in order to tu
 ## Folder & Image Thumbnail Browser
 By default, when calling this script, it shows a browser. The browser shows thumbnails for supported image files (currently BMP, PNG, JPG, and GIF), and lists subdirectories for navigation. When new files are encountered, it automatically creates thumbnails and stores them in a special-purpose subdirectory. (Because of this, the script may take a while to load when accessing it for the first time. It may even time out. Simply refresh until all thumbnails are created.)
 
-Use `$thumbnailSize` to set the size of the thumbnails' longest edge in pixels. `$thumbnailSquare` enforces square thumbnails, cropping the middle of the images. Thumbnails will be JPEGs, with `$thumbnailQuality` determining their image quality.
+Use `$thumbnailSize` to set the size of the thumbnails' longest edge in pixels. `$thumbnailSquare` enforces square thumbnails, cropping the middle of the images. Thumbnails will be JPEGs, with `$thumbnailQuality` determining their image quality. Note that, since the thumbnails are JPEGs, they do not support transparency. However, you can configure the JPEG colour that replaces image transparency in the colour scheme (see below).
 
 To organise the thumbnails in the browser, `$thumbnailColumns` and `$thumbnailColumnsMobile` set the maximum number of thumbnail columns in desktop mode, and the exact number of thumbnail columns on mobile, respectively. 
 
@@ -29,6 +29,8 @@ Mobile swipe shortcuts:
 
 ## Colour Scheme
 The style sheet uses only four colours: background, foreground (text, lines), and highlights for these two (for focus/hover). These can be set using `$bgColour`, `$fgColour`, `$bgColourHighlight`, and `$fgColourHighlight` using CSS colour codes. A light and a dark colour scheme are included. [This online example](https://files.noctifer.net/2014_california) uses the dark colour scheme.
+
+`$transparentRGB` contains the RGB values of the colour that replaces images transparency in the thumbnails. For the best effect, this colour should be the same as `$bgColour`.
 
 
 ## Notes on usage

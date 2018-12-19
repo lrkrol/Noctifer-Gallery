@@ -47,18 +47,20 @@ $thumbnailQuality = 100;
 $copyToSubs = true;
 $copyToSubsExcluded = array("..", ".git");
 
-# black colour scheme
-$bgColour = 'black';                # page background
-$bgColourHighlight = '#1c1c1c';     # browse page title & highlights background
-$fgColour = 'grey';                 # colour of text and lines
-$fgColourHighlight = 'white';       # colour of active links
+# dark colour scheme
+$bgColour = '#0a0a0a';                  # page background
+$bgColourHighlight = '#1c1c1c';         # browse page title & highlights background
+$fgColour = 'grey';                     # colour of text and lines
+$fgColourHighlight = 'white';           # colour of active links
+$transparentRGB = array(10, 10, 10);    # RGB values of colour that will replace transparency in thumbnails
 
 /*
-# white-blue colour scheme
-$bgColour = 'white';
+# light colour scheme
+$bgColour = '#fafafa';
 $bgColourHighlight = '#c8cfd4';
 $fgColour = '#4b6d67';
 $fgColourHighlight = '#03223a';
+$transparentRGB = array(250, 250, 250);
 */
 
 # case-insensitive list of allowed file extensions.
@@ -205,6 +207,7 @@ if ( isset( $_GET['view'] ) && in_array( $_GET['view'], $imageList ) ) {
 
             # creating thumbnail
             $thumbnail = imagecreatetruecolor( $new_width, $new_height );
+            imagefill($thumbnail, 0, 0, imagecolorallocate($thumbnail, $transparentRGB[0], $transparentRGB[1], $transparentRGB[2]));
             imagecopyresampled( $thumbnail, $img, 0, 0, $cropx, $cropy, $new_width, $new_height, $width-2*$cropx, $height-2*$cropy );
             $madeThumbnail = imagejpeg( $thumbnail, $thumbnailDirectory . "/" . $thumbnailPrefix . $image . ".jpg", $thumbnailQuality );
         }
