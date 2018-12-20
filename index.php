@@ -43,7 +43,7 @@ $thumbnailColumnsMobile = 2;
 $thumbnailQuality = 100;
 
 # whether or not to insert this script into subdirectories when no other index file is present,
-# and array of directories to not copy to
+# and if so, array of directories to not copy to
 $copyToSubs = true;
 $copyToSubsExcluded = array("..", ".git");
 
@@ -220,7 +220,7 @@ if ( isset( $_GET['view'] ) && in_array( $_GET['view'], $imageList ) ) {
 }
 
 ?>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="utf-8" />
 
