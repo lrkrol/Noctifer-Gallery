@@ -28,7 +28,7 @@ Mobile swipe shortcuts:
 
 
 ## Colour Scheme
-The style sheet uses only four colours: background, foreground (text, lines), and highlights for these two (for focus/hover). These can be set using `$bgColour`, `$fgColour`, `$bgColourHighlight`, and `$fgColourHighlight` using CSS colour codes. A light and a dark colour scheme are included. [This online example](https://files.noctifer.net/2014_california) uses the dark colour scheme.
+The style sheet uses only four colours: background, foreground (text, lines), and highlights for these two (for focus/hover). These can be set using `$bgColour`, `$fgColour`, `$bgColourHighlight`, and `$fgColourHighlight` using CSS colour codes. A light and a dark colour scheme are included. [This online example](https://files.noctifer.net/2014_california) uses the dark colour scheme; [this one](https://files.noctifer.net/2014-12-29_grunewald_snow) uses the light scheme.
 
 `$transparentRGB` contains the RGB values of the colour that replaces image transparency in the thumbnails. For the best effect, this colour should be the same as `$bgColour`.
 
