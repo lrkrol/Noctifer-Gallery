@@ -443,6 +443,7 @@ END;
                             background-color: <?php echo $bgColourHighlight; ?>; }
 
                     #viewTitleArrow {
+                            height: .75em;
                             fill: <?php echo $fgColour; ?>; }
 
                     #viewTitle a:hover > #viewTitleArrow path {
@@ -579,7 +580,7 @@ if ($mode == 'view') {
 
     echo <<<END
     <div id="viewContainer">
-        <div id="viewTitleContainer"><div id="viewTitle"><a href="$photo">$photo <svg id="viewTitleArrow" version="1.1" viewBox="0 0 1000 1500" style="fill: grey; height: .75em;" xmlns="http://www.w3.org/2000/svg"><path d="M536 1500l-464 -445 270 0 0 -631c0,-142 -23,-240 -69,-294 -46,-55 -128,-82 -246,-82l-27 0 0 -48 196 0c132,0 228,10 288,30 60,20 113,59 157,117 60,77 89,208 89,392l0 516 270 0 -464 445z" /></svg></a></div></div>
+        <div id="viewTitleContainer"><div id="viewTitle"><a href="$photo">$photo <svg id="viewTitleArrow" version="1.1" viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg"><path d="M536 1500l-464 -445 270 0 0 -631c0,-142 -23,-240 -69,-294 -46,-55 -128,-82 -246,-82l-27 0 0 -48 196 0c132,0 228,10 288,30 60,20 113,59 157,117 60,77 89,208 89,392l0 516 270 0 -464 445z" /></svg></a></div></div>
         <div id="viewPhotoContainer"><div id="viewPhoto" $bgCode onclick="toggleView('$photoUrl');">$imgCode</div></div>
         <div id="viewControlsContainer"><div id="viewControls"><a id="aFirst" href="?view=$firstUrl">&#x25c4;&#x25c4;</a>&nbsp;<a id="aPrevious" href="?view=$previousUrl">&#x25c4;</a>&nbsp;<a id="aClose" href=".">&#x2715;</a>&nbsp;<a id="aNext" href="?view=$nextUrl">&#x25ba;</a>&nbsp;<a id="aLast" href="?view=$lastUrl">&#x25ba;&#x25ba;</a></div></div>
     </div>
